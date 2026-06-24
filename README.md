@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PLANET SAFARI Bike Rental
 
-## Getting Started
+Conversion-focused two-wheeler rental website for **PLANET SAFARI Bike Rental**,
+Hampankatta, Mangaluru. Visitors browse the fleet, check pricing, and book
+directly over **WhatsApp** — no payment gateway, no accounts.
 
-First, run the development server:
+Live: https://planet-safari-bike-rental.vercel.app
+
+## Tech stack
+
+- **Next.js 16** (App Router) + **TypeScript**
+- **Tailwind CSS v4**
+- **lucide-react** icons, **motion** available for animation
+- **next-sitemap** for `sitemap.xml` + `robots.txt`
+- Deployed on **Vercel**
+
+## Design
+
+Earthy expedition / field-journal direction — warm sand & terracotta palette,
+`Fraunces` display serif + `Hanken Grotesk` body + `Spline Sans Mono` labels,
+topographic contours, grain, and stamp/route motifs.
+
+## Pages
+
+`/` Home · `/fleet` Fleet (filterable) · `/pricing` · `/about` · `/contact`
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build + sitemap (postbuild)
+npm start          # serve the production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customising for another business
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Most content lives in plain data files:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/data/business.ts` — name, phone, email, address, hours, map embed, siteUrl
+- `src/data/vehicles.ts` — fleet catalog & pricing
+- `src/data/reviews.ts`, `src/data/faqs.ts`
+- `next-sitemap.config.js` — `siteUrl`
 
-## Learn More
+## Images (zero-config drop-in)
 
-To learn more about Next.js, take a look at the following resources:
+Drop photos into `public/images/` and they appear automatically — until then the
+site renders designed placeholder artwork. See `public/images/README.md` for the
+exact folder layout (vehicle folders match each `slug` in `vehicles.ts`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## WhatsApp booking
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All booking CTAs open `wa.me` with a pre-filled message — see `src/lib/whatsapp.ts`.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Business logic & page specs: `docs/RENTAL_WEBSITE_BLUEPRINT.md`.
