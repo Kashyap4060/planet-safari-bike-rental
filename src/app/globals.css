@@ -5,25 +5,25 @@
    ============================================================ */
 
 @theme {
-  /* Earthy palette */
-  --color-sand: #f3e7d3;
-  --color-sand-deep: #ead9bd;
-  --color-paper: #fbf5ea;
-  --color-clay: #2c1e12;
-  --color-espresso: #3a2a1b;
-  --color-bark: #cdb795;
-  --color-bark-line: #d8c4a3;
+  /* Beige · green · white palette */
+  --color-sand: #ebf0ea;
+  --color-sand-deep: #dbe3da;
+  --color-paper: #ffffff;
+  --color-clay: #515654;
+  --color-espresso: #3c403e;
+  --color-bark: #b3c2b6;
+  --color-bark-line: #cfd8ce;
 
-  --color-terracotta: #b5532a;
-  --color-terracotta-deep: #8f3f1d;
-  --color-terracotta-soft: #d98b5f;
-  --color-ochre: #cf8a26;
-  --color-amber: #e3a73f;
-  --color-olive: #6c6a39;
-  --color-olive-deep: #50502a;
+  --color-terracotta: #4fb28f;
+  --color-terracotta-deep: #3a8a6c;
+  --color-terracotta-soft: #84c9af;
+  --color-ochre: #57a98a;
+  --color-amber: #7cc7ab;
+  --color-olive: #515654;
+  --color-olive-deep: #3c403e;
 
-  --color-wa: #25d366;
-  --color-wa-deep: #1da851;
+  --color-wa: #4fb28f;
+  --color-wa-deep: #3a8a6c;
 
   /* Type */
   --font-display: var(--font-fraunces);
@@ -109,7 +109,7 @@ h4 {
 /* ---------- Topographic contour background ---------- */
 .contour {
   background-color: var(--color-sand);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='none' stroke='%23b5532a' stroke-opacity='0.07' stroke-width='1.4'%3E%3Cpath d='M-50 300 C100 200 200 400 350 300 S550 200 700 300'/%3E%3Cpath d='M-50 340 C100 240 200 440 350 340 S550 240 700 340'/%3E%3Cpath d='M-50 380 C100 280 200 480 350 380 S550 280 700 380'/%3E%3Cpath d='M-50 260 C100 160 200 360 350 260 S550 160 700 260'/%3E%3Cpath d='M-50 220 C100 120 200 320 350 220 S550 120 700 220'/%3E%3Cpath d='M-50 420 C100 320 200 520 350 420 S550 320 700 420'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='none' stroke='%234fb28f' stroke-opacity='0.09' stroke-width='1.4'%3E%3Cpath d='M-50 300 C100 200 200 400 350 300 S550 200 700 300'/%3E%3Cpath d='M-50 340 C100 240 200 440 350 340 S550 240 700 340'/%3E%3Cpath d='M-50 380 C100 280 200 480 350 380 S550 280 700 380'/%3E%3Cpath d='M-50 260 C100 160 200 360 350 260 S550 160 700 260'/%3E%3Cpath d='M-50 220 C100 120 200 320 350 220 S550 120 700 220'/%3E%3Cpath d='M-50 420 C100 320 200 520 350 420 S550 320 700 420'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* ---------- Stamp / badge ---------- */
@@ -136,7 +136,7 @@ h4 {
 .journal-card {
   background: var(--color-paper);
   border: 1.5px solid var(--color-bark);
-  box-shadow: 6px 6px 0 0 rgba(44, 30, 18, 0.08);
+  box-shadow: 6px 6px 0 0 rgba(81, 86, 84, 0.12);
 }
 
 /* ---------- Buttons ---------- */

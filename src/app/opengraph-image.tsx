@@ -17,8 +17,8 @@ export default function OgImage() {
           justifyContent: 'space-between',
           padding: 72,
           background:
-            'radial-gradient(120% 120% at 15% 0%, #e3a73f 0%, #b5532a 50%, #3a2a1b 100%)',
-          color: '#fbf5ea',
+            'radial-gradient(120% 120% at 15% 0%, #7cc7ab 0%, #4fb28f 50%, #3c403e 100%)',
+          color: '#ffffff',
           fontFamily: 'serif',
         }}
       >
@@ -37,7 +37,7 @@ export default function OgImage() {
               width: 18,
               height: 18,
               borderRadius: 999,
-              border: '4px solid #fbf5ea',
+              border: '4px solid #ffffff',
             }}
           />
           Planet Safari
@@ -50,7 +50,7 @@ export default function OgImage() {
           <div style={{ fontSize: 84, fontWeight: 700, lineHeight: 1.02 }}>
             coast &amp; the Ghats
           </div>
-          <div style={{ marginTop: 28, fontSize: 34, color: '#f3e7d3' }}>
+          <div style={{ marginTop: 28, fontSize: 34, color: '#ebf0ea' }}>
             Scooty &amp; bike rentals · Book on WhatsApp
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function OgImage() {
             display: 'flex',
             justifyContent: 'space-between',
             fontSize: 26,
-            color: '#f3e7d3',
+            color: '#ebf0ea',
           }}
         >
           <span>Hampankatta, Mangaluru</span>

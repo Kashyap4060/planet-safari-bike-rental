@@ -23,17 +23,20 @@ const STATS = [
 
 const GALLERY_LABELS = ['Panambur Beach', 'Western Ghats', 'Tannirbhavi', 'Coastal Road', 'Old Mangaluru', 'Sunset Point']
 const GALLERY_BG = [
-  'linear-gradient(150deg,#e3a73f,#b5532a)',
-  'linear-gradient(150deg,#8a8a4e,#50502a)',
-  'linear-gradient(150deg,#d98b5f,#8f3f1d)',
-  'linear-gradient(150deg,#cf8a26,#6c6a39)',
-  'linear-gradient(150deg,#b5532a,#3a2a1b)',
-  'linear-gradient(150deg,#e3a73f,#cf8a26)',
+  'linear-gradient(150deg,#7cc7ab,#4fb28f)',
+  'linear-gradient(150deg,#6f9d86,#515654)',
+  'linear-gradient(150deg,#84c9af,#3a8a6c)',
+  'linear-gradient(150deg,#57a98a,#515654)',
+  'linear-gradient(150deg,#4fb28f,#3c403e)',
+  'linear-gradient(150deg,#7cc7ab,#57a98a)',
 ]
 
 export default function AboutPage() {
   const gallery = scanGalleryImages()
-  const introImg = scanPageHero('about')
+  // Prefer a dedicated /pages/about image; otherwise reuse a scenic gallery photo
+  // so the intro card and page header never fall back to a bare gradient.
+  const introImg = scanPageHero('about') ?? gallery[0] ?? null
+  const cardImg = scanPageHero('about') ?? gallery[1] ?? gallery[0] ?? null
 
   return (
     <>
@@ -71,9 +74,9 @@ export default function AboutPage() {
 
         <Reveal delay={120}>
           <div className="grain relative aspect-[4/5] overflow-hidden rounded-[var(--radius-card)] border border-bark">
-            {introImg ? (
+            {cardImg ? (
               <Image
-                src={introImg}
+                src={cardImg}
                 alt="Riding through coastal Mangaluru"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -82,7 +85,7 @@ export default function AboutPage() {
             ) : (
               <div
                 className="flex h-full w-full items-center justify-center"
-                style={{ background: 'radial-gradient(120% 120% at 30% 10%, #e3a73f, #b5532a 55%, #3a2a1b)' }}
+                style={{ background: 'radial-gradient(120% 120% at 30% 10%, #7cc7ab, #4fb28f 55%, #3c403e)' }}
               >
                 <Compass size={84} strokeWidth={1.2} className="text-paper/80" />
               </div>

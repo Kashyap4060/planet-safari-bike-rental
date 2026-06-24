@@ -1,10 +1,10 @@
 import { Bike } from 'lucide-react'
 
 const PALETTES = [
-  { from: '#d98b5f', to: '#b5532a' },
-  { from: '#e3a73f', to: '#cf8a26' },
-  { from: '#8a8a4e', to: '#50502a' },
-  { from: '#c98a4b', to: '#8f3f1d' },
+  { from: '#84c9af', to: '#4fb28f' },
+  { from: '#7cc7ab', to: '#57a98a' },
+  { from: '#6f9d86', to: '#3c403e' },
+  { from: '#84c9af', to: '#3a8a6c' },
 ]
 
 /**
@@ -33,7 +33,7 @@ export default function VehiclePlaceholder({
         preserveAspectRatio="xMidYMid slice"
         aria-hidden="true"
       >
-        <g fill="none" stroke="#fbf5ea" strokeWidth="1.2">
+        <g fill="none" stroke="#ffffff" strokeWidth="1.2">
           {[40, 80, 120, 160, 200].map((r) => (
             <circle key={r} cx="320" cy="40" r={r} />
           ))}

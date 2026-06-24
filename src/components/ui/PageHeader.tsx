@@ -33,7 +33,7 @@ export default function PageHeader({ eyebrow, title, subtitle, image }: Props) {
             className="absolute inset-0"
             style={{
               background:
-                'radial-gradient(120% 120% at 15% 0%, rgba(207,138,38,0.32), transparent 55%), radial-gradient(90% 90% at 100% 100%, rgba(181,83,42,0.4), transparent 60%)',
+                'radial-gradient(120% 120% at 15% 0%, rgba(79,178,143,0.32), transparent 55%), radial-gradient(90% 90% at 100% 100%, rgba(58,138,108,0.4), transparent 60%)',
             }}
           />
         </div>

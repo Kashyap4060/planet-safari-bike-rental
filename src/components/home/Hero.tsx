@@ -12,15 +12,15 @@ import { business } from '@/data/business'
 const FALLBACK_SLIDES = [
   {
     label: 'The Coast',
-    bg: 'radial-gradient(120% 130% at 20% 10%, #e3a73f 0%, #b5532a 55%, #8f3f1d 100%)',
+    bg: 'radial-gradient(120% 130% at 20% 10%, #7cc7ab 0%, #4fb28f 55%, #3a8a6c 100%)',
   },
   {
     label: 'The Ghats',
-    bg: 'radial-gradient(120% 130% at 80% 0%, #8a8a4e 0%, #50502a 55%, #2c1e12 100%)',
+    bg: 'radial-gradient(120% 130% at 80% 0%, #6f9d86 0%, #515654 55%, #3c403e 100%)',
   },
   {
     label: 'The Open Road',
-    bg: 'radial-gradient(120% 130% at 50% 100%, #d98b5f 0%, #b5532a 50%, #3a2a1b 100%)',
+    bg: 'radial-gradient(120% 130% at 50% 100%, #84c9af 0%, #4fb28f 50%, #3c403e 100%)',
   },
 ]
 
