@@ -4,9 +4,14 @@ import { vehicles } from '@/data/vehicles'
 
 const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif'])
 
+// Keep carousels sane no matter how many files are dropped into a folder.
+const MAX_FLEET_IMAGES = 8
+const MAX_HERO_IMAGES = 6
+
 /**
  * Scan public/images/fleet/<slug> for vehicle photos.
  * Drop images into the folder and they appear automatically — no config needed.
+ * Only the first MAX_FLEET_IMAGES (alphabetical) are used per vehicle.
  * Server-only (uses fs); call from Server Components and pass results down as props.
  */
 export function scanFleetImages(slug: string): string[] {
@@ -16,6 +21,7 @@ export function scanFleetImages(slug: string): string[] {
       .readdirSync(dir)
       .filter((f) => IMAGE_EXTS.has(path.extname(f).toLowerCase()))
       .sort()
+      .slice(0, MAX_FLEET_IMAGES)
       .map((f) => `/images/fleet/${slug}/${f}`)
   } catch {
     return []
@@ -45,7 +51,7 @@ function scanDir(...segments: string[]): string[] {
 
 /** Hero carousel images, if any have been dropped into public/images/hero. */
 export function scanHeroImages(): string[] {
-  return scanDir('hero')
+  return scanDir('hero').slice(0, MAX_HERO_IMAGES)
 }
 
 /** Page hero image for /fleet, /pricing, /about, /contact — empty if none. */
